@@ -36,26 +36,29 @@ export default class Application {
         return this.pluginUseManager.resetAttaching().ready()
     }
 
-    createDefault(appComponent, appElement = '#app') {
+    createDefault(appComponent, readyCallback = null, appElement = '#app', failed = false) {
         this.instance = new Vue(Object.assign({
             render: h => h(appComponent),
+            beforeCreate() {
+                readyCallback && readyCallback(this, failed)
+            },
         }, this.pluginUseManager.attached)).$mount(appElement)
     }
 
-    createFailed(appFailedComponent, appElement = '#app') {
+    createFailed(appFailedComponent, readyCallback = null, appElement = '#app') {
         this.pluginsReady()
             .then(() => this.pluginUseManager.ready(SCOPE.failed)
-                .then(() => this.createDefault(appFailedComponent, appElement))
-                .catch(() => this.createDefault(appFailedComponent, appElement)))
-            .catch(() => this.createDefault(appFailedComponent, appElement))
+                .then(() => this.createDefault(appFailedComponent, readyCallback, appElement, true))
+                .catch(() => this.createDefault(appFailedComponent, readyCallback, appElement, true)))
+            .catch(() => this.createDefault(appFailedComponent, readyCallback, appElement, true))
     }
 
-    create(appComponent, appFailedComponent, appPluginUses = [], appElement = '#app') {
+    create(appComponent, appFailedComponent, appPluginUses = [], readyCallback = null, appElement = '#app') {
         this.use(appPluginUses)
             .pluginsReady()
             .then(() => this.pluginUseManager.ready(SCOPE.default)
-                .then(() => this.createDefault(appComponent, appElement))
-                .catch(() => this.createFailed(appFailedComponent, appElement)))
-            .catch(() => this.createFailed(appFailedComponent, appElement))
+                .then(() => this.createDefault(appComponent, readyCallback, appElement))
+                .catch(() => this.createFailed(appFailedComponent, readyCallback, appElement)))
+            .catch(() => this.createFailed(appFailedComponent, readyCallback, appElement))
     }
 }
