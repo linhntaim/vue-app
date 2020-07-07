@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.js"],"names":["Application","app"],"mappings":"AAAA,MAAOA,CAAAA,WAAP,KAAwB,eAAxB,CAEA,KAAMC,CAAAA,GAAG,CAAG,GAAID,CAAAA,WAAhB,CAEA,cAAeC,CAAAA,GAAf","sourcesContent":["import Application from './application'\r\n\r\nconst app = new Application\r\n\r\nexport default app\r\n"],"file":"index.js"}
