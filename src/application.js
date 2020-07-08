@@ -33,9 +33,13 @@ export default class Application {
     }
 
     register(handle) {
+        let register = false
         Vue.mixin({
             beforeCreate() {
-                handle(this)
+                if (!register) {
+                    register = true
+                    handle(this)
+                }
             },
         })
         return this
