@@ -1,6 +1,6 @@
 {
     "name": "@dsquare-gbu/vue-app",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "To manage Vue application in a nutshell",
     "main": "dist/index.js",
     "scripts": {

@@ -5,6 +5,31 @@ export default class Application {
     constructor() {
         this.instance = null
         this.pluginUseManager = new PluginUseManager()
+
+        this.clientIps = []
+        this.maintenanceMode = null
+        this.limitationMode = null
+    }
+
+    maintenance(maintenanceMode) {
+        if (typeof maintenanceMode !== 'undefined') {
+            this.maintenanceMode = maintenanceMode
+        }
+        return this.maintenanceMode
+    }
+
+    limitation(limitationMode) {
+        if (typeof limitationMode !== 'undefined') {
+            this.limitationMode = limitationMode
+        }
+        return this.limitationMode
+    }
+
+    ips(clientIps) {
+        if (typeof clientIps !== 'undefined') {
+            this.clientIps = clientIps
+        }
+        return this.clientIps
     }
 
     get() {
