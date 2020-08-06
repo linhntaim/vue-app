@@ -1,6 +1,6 @@
 {
     "name": "@dsquare-gbu/vue-app",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "To manage Vue application in a nutshell",
     "main": "dist/index.js",
     "scripts": {
@@ -22,17 +22,17 @@
     "author": "Nguyen Tuan Linh <tuanlinh.nguyen@dsquare.com.vn>",
     "license": "MIT",
     "devDependencies": {
-        "@babel/cli": "^7.10.4",
-        "@babel/core": "^7.10.4",
-        "@babel/preset-env": "^7.10.4",
-        "@babel/register": "^7.10.4",
+        "@babel/cli": "^7.10.5",
+        "@babel/core": "^7.11.1",
+        "@babel/preset-env": "^7.11.0",
+        "@babel/register": "^7.10.5",
         "chai": "^4.2.0",
         "coveralls": "^3.1.0",
-        "mocha": "^8.0.1",
+        "mocha": "^8.1.1",
         "nyc": "^15.1.0",
         "vue": "^2.6.11"
     },
     "dependencies": {
-        "@dsquare-gbu/vue-utils": "^1.0.1"
+        "@dsquare-gbu/vue-utils": "^1.0.30"
     }
 }
