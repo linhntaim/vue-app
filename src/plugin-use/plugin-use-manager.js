@@ -1,4 +1,4 @@
-import {PromiseManager} from '@dsquare-gbu/vue-utils'
+import {PromiseManager} from '@linhntaim/vue-utils'
 import {SCOPE} from './constants'
 import PluginUse from './plugin-use'
 
