@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/index.js"],"names":["app","Application"],"mappings":"gGAAA,kE,oFAEA,GAAMA,CAAAA,GAAG,CAAG,GAAIC,wBAAhB,C,aAEeD,G","sourcesContent":["import Application from './application'\r\n\r\nconst app = new Application\r\n\r\nexport default app\r\n"],"file":"index.js"}
+{"version":3,"sources":["../src/index.js"],"names":["app","Application"],"mappings":"yFAAA,kE,oFAEO,GAAMA,CAAAA,GAAG,CAAG,GAAIC,wBAAhB,C","sourcesContent":["import Application from './application'\r\n\r\nexport const app = new Application\r\n"],"file":"index.js"}

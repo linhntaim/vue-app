@@ -1,5 +1,3 @@
 import Application from './application'
 
-const app = new Application
-
-export default app
+export const app = new Application
