@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import PluginUseManager, {SCOPE} from './plugin-use'
+import {PluginUseManager, SCOPE} from './plugin-use'
 
-export default class Application {
+export class Application {
     constructor() {
         this.instance = null
         this.pluginUseManager = new PluginUseManager()

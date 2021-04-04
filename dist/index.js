@@ -1,2 +1,2 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.app=void 0;var _application=_interopRequireDefault(require("./application"));function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj}}var app=new _application["default"];exports.app=app;
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.app=void 0;var _application=require("./application");var app=new _application.Application;exports.app=app;
 //# sourceMappingURL=index.js.map

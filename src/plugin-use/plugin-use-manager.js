@@ -1,8 +1,8 @@
+import {PluginUse} from './plugin-use'
 import {PromiseManager} from '@linhntaim/vue-utils'
 import {SCOPE} from './constants'
-import PluginUse from './plugin-use'
 
-export default class PluginUseManager {
+export class PluginUseManager {
     constructor() {
         this.pluginUses = {}
         this.pluginUses[SCOPE.always] = []
