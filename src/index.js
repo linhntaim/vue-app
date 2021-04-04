@@ -1,3 +1,3 @@
-import Application from './application'
+import {Application} from './application'
 
 export const app = new Application

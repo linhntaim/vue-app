@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-export default class PluginUse {
+export class PluginUse {
     constructor(name, plugin, attached = null, options = null, promiseCallback = null) {
         this.name = name
         this.hasAttached = !!attached
