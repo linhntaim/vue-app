@@ -20,13 +20,22 @@ export class PluginUseManager {
         return this
     }
 
-    ready(scope = SCOPE.always) {
+    readyByScopes(scopes) {
         const promiseManager = new PromiseManager
-        this.pluginUses[scope].forEach(pluginUse => promiseManager.add(pluginUse.name, pluginUse.promise()))
-        return promiseManager.ready().then(() => this.pluginUses[scope].forEach(pluginUse => {
-            if (pluginUse.hasAttached) {
-                this.attached[pluginUse.name] = pluginUse.attached
-            }
-        }))
+        scopes.forEach(
+            scope => this.pluginUses[scope].forEach(
+                pluginUse => promiseManager.add(pluginUse.name, pluginUse.promise()),
+            ),
+        )
+        return promiseManager.ready()
+            .then(() => scopes.forEach(
+                scope => this.pluginUses[scope].forEach(
+                    pluginUse => pluginUse.hasAttached && (this.attached[pluginUse.name] = pluginUse.attached),
+                ),
+            ))
+    }
+
+    ready(scope = SCOPE.always) {
+        return this.readyByScopes(scope === SCOPE.always ? [scope] : [scope, SCOPE.always])
     }
 }

@@ -74,7 +74,7 @@ export class Application {
         return this.pluginUseManager.resetAttaching().ready()
     }
 
-    createDefault(appComponent, appElement = '#app', failed = false) {
+    createDefault(appComponent, appElement = '#app') {
         this.instance = new Vue(Object.assign({
             render: h => h(appComponent),
         }, this.pluginUseManager.attached)).$mount(appElement)
