@@ -1,6 +1,6 @@
 {
     "name": "@linhntaim/vue-app",
-    "version": "1.4.2",
+    "version": "1.4.6",
     "description": "To manage Vue application in a nutshell",
     "main": "dist/index.js",
     "scripts": {
@@ -33,6 +33,6 @@
         "vue": "^2.6.12"
     },
     "dependencies": {
-        "@linhntaim/vue-utils": "^1.4.1"
+        "@linhntaim/vue-utils": "^1.4.6"
     }
 }

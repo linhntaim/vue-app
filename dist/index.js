@@ -1,2 +1,2 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.app=void 0;var _application=require("./application");var app=new _application.Application;exports.app=app;
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});Object.defineProperty(exports,"SCOPE",{enumerable:true,get:function get(){return _pluginUse.SCOPE}});exports.app=void 0;var _application=require("./application");var _pluginUse=require("./plugin-use");var app=new _application.Application;exports.app=app;
 //# sourceMappingURL=index.js.map
